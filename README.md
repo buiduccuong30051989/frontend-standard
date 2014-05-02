@@ -34,21 +34,25 @@ Use the SCSS syntax of SASS and separate your stylesheets by the sections or mod
 Nest your SASS. 
 
 Do this:
+
 	body {
 		header {
 		}
 	}
 
 Not this:
+
 	body header {
 	}
 
 Also, this:
+
 	ul,
 	ol {
 	}
 
 Not this:
+
 	ul, ol {
 	}
 
@@ -79,9 +83,11 @@ Include aria roles for accessibility. See here for more information on when/wher
 Even though some closing tags are optional in the latest spec, include them anyways for clarity.
 
 Do this:
+
 	<li>List Item</li>
 
 Not this:
+
 	<li>List Item
 
 ### Responsive Images
