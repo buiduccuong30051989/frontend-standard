@@ -29,7 +29,7 @@ Use the SCSS syntax of SASS and separate your stylesheets by the sections or mod
 * global.scss - for styling elements without classes (H1 through H4, .container, etc...)
 * print.scss - for print styles
 
-### Nesting and Multiple Selectors
+### Nesting and Spacing and Multiple Selectors
 
 Nest your SASS. 
 
@@ -45,7 +45,7 @@ Not this:
 	body header {
 	}
 
-Also, this:
+For spacing, this:
 
 	ul,
 	ol {
@@ -54,6 +54,25 @@ Also, this:
 Not this:
 
 	ul, ol {
+	}
+	
+Also, add a line break before starting a new declaration with properties. In other words, this:
+
+	ul {
+		property:;
+		
+		li {
+			property:;
+		}
+	}
+	
+Not this:
+
+	ul {
+		property:;
+		li {
+			property:;
+		}
 	}
 
 ### Media Queries
@@ -67,6 +86,49 @@ Media queries should be nested and organized with the elements they are affectin
 Use percentages for widths, unless a special case dictates otherwise.
 
 Use EMs for font-size, line-height, height, and any height-based style. Keep the base font size at 16px so we can use the Bourbon mixin, em().
+
+### Property Order
+
+Group CSS properties in the following order:
+
+	selector {
+		
+		// Content
+		content:;
+		
+		// Positioning
+		position:;
+		top:;
+		right:;
+		bottom:;
+		left:;
+		display:;
+		float:;
+		clear:;
+		
+		// Sizing
+		width:;
+		height:;
+		overflow:;
+		padding:;
+		margin:;
+		
+		// Font
+		font:;
+		line-height:;
+		color:;
+		text-shadow:;
+		
+		// Background and borders
+		background:;
+		border:;
+		border-radius:;
+		box-shadow:;
+		
+		// Transitions
+		transitions:;
+
+	}
 
 ## HTML Rules
 
