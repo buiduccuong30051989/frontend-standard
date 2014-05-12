@@ -9,7 +9,7 @@ Compiling rules and ideas in the readme for now, to make sure we're all on the s
 
 ### Indentation
 
-Unless the environment requires otherwise (ruby, for example), use 4 space hard tabs for indentation of all code.
+Unless the environment requires otherwise (ruby, for example), use 4 space soft tabs for indentation of all code.
 
 ### Double Quotes vs. Single Quotes
 
