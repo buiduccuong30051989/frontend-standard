@@ -21,6 +21,20 @@ For naming files, classes or IDs, use hyphens (-) rather than underscores (_). T
 
 ## CSS Rules
 
+Place a space after the ":" in property declarations, and a space before the "{" in rule declarations.
+
+Do this:
+
+    body {
+        background: #fff;
+    }
+    
+Not this:
+
+    body{
+        background:#fff;
+    }
+
 ### SASS (SCSS)
 
 Use the SCSS syntax of SASS and separate your stylesheets by the sections or modules they are targeting. A few stylesheets should always be present:
@@ -29,7 +43,7 @@ Use the SCSS syntax of SASS and separate your stylesheets by the sections or mod
 * global.scss - for styling elements without classes (H1 through H4, .container, etc...)
 * print.scss - for print styles
 
-### Nesting and Spacing and Multiple Selectors
+### Nesting
 
 Nest your SASS. 
 
@@ -45,7 +59,9 @@ Not this:
 	body header {
 	}
 
-For spacing, this:
+### Multiple Selectors
+
+For multiple selectors, this:
 
 	ul,
 	ol {
@@ -56,7 +72,11 @@ Not this:
 	ul, ol {
 	}
 	
-Also, add a line break before starting a new declaration with properties. In other words, this:
+### Spacing
+
+Add a line break before starting a new declaration with properties. 
+
+This:
 
 	ul {
 		property:;
