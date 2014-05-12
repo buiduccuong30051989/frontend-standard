@@ -1,9 +1,9 @@
-frontend-standard
+KA+A Front-End Development Standards
 =================
 
-Front-end development standards for KA+A
+Internal Note: Compiling rules and ideas in the readme for now, to make sure we're all on the same page.
 
-Compiling rules and ideas in the readme for now, to make sure we're all on the same page.
+Documented here are the standards for front-end development both defined and used by [KA+A](http://kaplusa.com). Before reading this, you should be familiar with [Responsive Web Design](http://alistapart.com/article/responsive-web-design/), media queries, and SASS (specifically the [SCSS](http://sass-lang.com/) syntax).
 
 ## General Rules
 
@@ -17,7 +17,7 @@ Use double quotes (") rather than single quotes (') for anything that needs to b
 
 ### Hyphens vs. Underscores
 
-For naming files, classes or IDs, use hyphens (-) rather than underscores (_). The only time you should use an underscore in naming, is to prefix a partial (for example: _header.html or _header.php)
+For naming files, classes or IDs, use hyphens (-) rather than underscores (_). The only time you should use an underscore in naming is to prefix a partial (for example: _header.html or _header.php)
 
 ## CSS Rules
 
@@ -74,12 +74,20 @@ Not this:
 			property:;
 		}
 	}
+	
+This is fine:
 
+    ul {
+        li {
+            property:;
+        }
+    }
+    
 ### Media Queries
 
 Declare media queries as mixins in mixins.scss. Go mobile first. (for example: base styles, 400up, 600up, 1000up...)
 
-Media queries should be nested and organized with the elements they are affecting. See here for details: http://css-tricks.com/conditional-media-query-mixins/
+Media queries should be nested and organized with the elements they are affecting. Read [Chris Coiyer's article](http://css-tricks.com/conditional-media-query-mixins/) for details.
 
 ### Sizing Units
 
@@ -130,11 +138,13 @@ Group CSS properties in the following order:
 
 	}
 
+(Note: Comments are for purposes of the style guide only. No need to comment each group of properties in your actual code.)
+
 ## HTML Rules
 
 ### Classes vs IDs
 
-Classes are for styling elements. IDs are for targeting elements with javascript (it's more performant than classes).
+Classes are for styling elements. IDs are for targeting elements with javascript.
 
 ### Aria Roles
 
@@ -142,7 +152,7 @@ Include aria roles for accessibility. See here for more information on when/wher
 
 ### Optional Closing Tags
 
-Even though some closing tags are optional in the latest spec, include them anyways for clarity.
+Even though omitting some closing tags is syntactically correct, include them anyways for clarity.
 
 Do this:
 
@@ -151,6 +161,16 @@ Do this:
 Not this:
 
 	<li>List Item
+	
+On the other hand, do not close self-closing elements, such as <br>, <hr> and <img>.
+
+Do this:
+
+    <hr>
+
+Not this:
+
+    <hr />
 
 ### Responsive Images
 
@@ -161,3 +181,21 @@ Use inline SVG for vector images. Provide a fallback for IE8. To keep code maint
 #### Raster
 
 Use the <picture> element to provide the optimal image sizes and crops for different breakpoints and resolutions. For a fallback, use picturefill.js
+
+### Attribute Order
+
+For consistency, HTML attributes should be written in the following order:
+
+* class
+* id, name
+* data-*
+* src, for, type, href
+* title, alt
+* aria-*, role
+
+For example:
+
+    <nav class="main-nav" role="navigation"
+        <a class="btn" id="menu-toggle" data-toggle="dropdown" href="#" role="button">
+        <input id="first-name" name="first-name" type="text" />
+    </nav>
