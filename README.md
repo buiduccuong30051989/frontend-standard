@@ -3,7 +3,7 @@ KA+A Front-End Development Standards
 
 Internal Note: Compiling rules and ideas in the readme for now, to make sure we're all on the same page.
 
-Documented here are the standards for front-end development both defined and used by [KA+A](http://kaplusa.com). Before reading this, you should be familiar with [Responsive Web Design](http://alistapart.com/article/responsive-web-design/), media queries, and SASS (specifically the [SCSS](http://sass-lang.com/) syntax).
+Documented here are the standards for front-end development both defined and used by [KA+A](http://kaplusa.com). Before reading this, you should be familiar with Responsive Web Design, media queries, and SASS (specifically the [SCSS](http://sass-lang.com/) syntax).
 
 ## General Rules
 
@@ -148,7 +148,7 @@ Classes are for styling elements. IDs are for targeting elements with javascript
 
 ### Aria Roles
 
-Include aria roles for accessibility. See here for more information on when/where/how to use: http://rawgit.com/w3c/aria-in-html/master/index.html
+Include aria roles for accessibility. [See here](http://rawgit.com/w3c/aria-in-html/master/index.html) for more information on when/where/how to use.
 
 ### Optional Closing Tags
 
@@ -162,7 +162,7 @@ Not this:
 
 	<li>List Item
 	
-On the other hand, do not close self-closing elements, such as <br>, <hr> and <img>.
+On the other hand, do not close self-closing elements, such as the image or horizontal rule tags.
 
 Do this:
 
@@ -180,7 +180,7 @@ Use inline SVG for vector images. Provide a fallback for IE8. To keep code maint
 
 #### Raster
 
-Use the <picture> element to provide the optimal image sizes and crops for different breakpoints and resolutions. For a fallback, use picturefill.js
+Use the picture element to provide the optimal image sizes and crops for different breakpoints and resolutions. For a fallback, use picturefill.js
 
 ### Attribute Order
 
