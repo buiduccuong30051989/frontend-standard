@@ -1,4 +1,4 @@
-KA+A Front-End Development Standards
+KA+A Front-End Development Standard
 =================
 
 Internal Note: Compiling rules and ideas in the readme for now, to make sure we're all on the same page.
@@ -18,6 +18,10 @@ Use double quotes (") rather than single quotes (') for anything that needs to b
 ### Hyphens vs. Underscores
 
 For naming files, classes or IDs, use hyphens (-) rather than underscores (_). The only time you should use an underscore in naming is to prefix a partial (for example: _header.html or _header.php)
+
+### Everything Lowercase
+
+All HTML, CSS, Javascript and file names should be written entirely in lowercase. 
 
 ## CSS Rules
 
@@ -46,6 +50,18 @@ Use the SCSS syntax of SASS and separate your stylesheets by the sections or mod
 * mixins.scss - declare the primary color palette and font stack variables, as well as mixins for media queries and any other styles that are used across multiple types of elements.
 * global.scss - for styling elements without classes (H1 through H4, .container, etc...)
 * print.scss - for print styles
+
+### Compiling
+
+Depending on the project, we will compile SASS in one of three ways:
+
+1. **Hammer** - for static HTML websites or prototypes
+2. **CodeKit** - for working on local PHP sites, such as WordPress
+3. **Local App Environment** - when SASS is installed in an app we're working on, it will compile with the rest of the app.
+
+### Bourbon
+
+We use [Bourbon](http://bourbon.io/) as our mixin library of choice. Bourbon is included in Hammer and CodeKit by default, and is easy to install in a Rails app using the instructions on the [Bourbon website](http://bourbon.io/). For information on the mixins made available by Bourbon, reference the [documentation](http://bourbon.io/docs/).
 
 ### Nesting
 
@@ -188,7 +204,7 @@ Group CSS properties in the following order:
 
 	}
 
-(Note: Comments are for purposes of the style guide only. No need to comment each group of properties in your actual code.)
+Mixins should be included in the appropriate section. For example, the bourbon mixin "@include linear-gradient()" would be included in the background section, since it outputs the "background-image" property. (Note: Comments are for purposes of the style guide only. No need to comment each group of properties in your actual code.)
 
 ## HTML Rules
 
