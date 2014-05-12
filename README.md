@@ -3,7 +3,7 @@ KA+A Front-End Development Standards
 
 Internal Note: Compiling rules and ideas in the readme for now, to make sure we're all on the same page.
 
-Documented here are the standards for front-end development both defined and used by [KA+A](http://kaplusa.com). Before reading this, you should be familiar with Responsive Web Design, media queries, and SASS (specifically the [SCSS](http://sass-lang.com/) syntax).
+Documented here are the standards for front-end development both defined and used by [KA+A](http://kaplusa.com). Before reading this, you should be familiar with proper HTML syntax, Responsive Web Design, media queries, and SASS (specifically the [SCSS](http://sass-lang.com/) syntax).
 
 ## General Rules
 
@@ -21,16 +21,20 @@ For naming files, classes or IDs, use hyphens (-) rather than underscores (_). T
 
 ## CSS Rules
 
-Place a space after the ":" in property declarations, and a space before the "{" in rule declarations.
+Place a space after the ":" in property declarations.
+Place a space before the "{" in rule declarations.
+Use // for comments, not /* */.
 
 Do this:
 
+    // Comment
     body {
         background: #fff;
     }
     
 Not this:
 
+    /* Comment */
     body{
         background:#fff;
     }
@@ -115,6 +119,32 @@ Use percentages for widths, unless a special case dictates otherwise.
 
 Use EMs for font-size, line-height, height, and any height-based style. Keep the base font size at 16px so we can use the Bourbon mixin, em().
 
+### Shorthand
+
+Use CSS shorthand whenever possible.
+
+Do this:
+
+    p {
+        margin: 1em 0 2em;
+        font: bold 1.5em/1.5 Helvetica;
+    }
+
+Not this:
+
+    p {
+        margin-top: 1em;
+        margin-right: 0;
+        margin-bottom: 2em;
+        margin-left: 0;
+        font-weight: bold; 
+        font-size: 1.5em;
+        line-height: 1.5; 
+        font-family: Helvetica; 
+        font-variant: normal;
+        font-style: normal;
+    }
+
 ### Property Order
 
 Group CSS properties in the following order:
@@ -162,13 +192,35 @@ Group CSS properties in the following order:
 
 ## HTML Rules
 
-### Classes vs IDs
+### Classes and IDs
 
 Classes are for styling elements. IDs are for targeting elements with javascript.
 
-### Aria Roles
+For naming, keep class and ID names as short as possible, without sacrificing clarity. Don't name classes and IDs based on presentation or style, but based on their purpose and content.
+
+Good class names:
+
+    .subnav
+    .hero
+    .btn-primary
+
+Bad class names:
+
+    .leftnav
+    .dark-background
+    .red-button
+
+### Accessibility
+
+#### Aria Roles
 
 Include aria roles for accessibility. [See here](http://rawgit.com/w3c/aria-in-html/master/index.html) for more information on when/where/how to use.
+
+#### Alt Tags
+
+Include alt tags for all images with descriptive content. If no benefit can be provided through an alt tag (if the image is purely ornamental), then provide an empty alt tag:
+
+    alt=""
 
 ### Optional Closing Tags
 
@@ -192,6 +244,20 @@ Not this:
 
     <hr />
 
+### Type Attributes
+
+Omit optional type attributes from stylesheet and javascript references.
+
+Do this:
+
+    <link rel="stylesheet" src="style.css">
+    <script src="script.js"></script>
+    
+Not this:
+    
+    <link rel="stylesheet" src="style.css" type="text/css">
+    <script src="script.js" type="text/javascript"></script>
+    
 ### Responsive Images
 
 #### Vector
