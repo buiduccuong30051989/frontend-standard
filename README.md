@@ -280,6 +280,8 @@ Not this:
 
 Use inline SVG for vector images. Provide a fallback for IE8. To keep code maintainable, use PHP or Hammer includes rather than pasting the entire inline SVG in the HTML.
 
+When using inline SVG, include title, description, role and aria-labeledby for optimizal accessibility. Further detail available [here](http://www.sitepoint.com/tips-accessible-svg/).
+
 #### Raster
 
 Use the picture element to provide the optimal image sizes and crops for different breakpoints and resolutions. For a fallback, use picturefill.js
