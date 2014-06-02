@@ -274,6 +274,10 @@ Not this:
     <link rel="stylesheet" src="style.css" type="text/css">
     <script src="script.js" type="text/javascript"></script>
     
+### Icon Fonts
+
+When using SymbolSet, use the descriptive class name (don't rely on keywords) for better browser support.
+
 ### Responsive Images
 
 #### Vector
