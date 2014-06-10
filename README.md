@@ -287,7 +287,18 @@ Not this:
     
 ### Icon Fonts
 
-When using SymbolSet, use the descriptive class name (don't rely on keywords) for better browser support.
+We're big fans of [Symbolset](https://symbolset.com/) here, which supports adding icons through either class names or keywords. When using SymbolSet, use the descriptive class name (don't rely on keywords) for better browser support.
+
+Do this:
+
+	<i class="ss-settings"></i>
+	
+Not this:
+
+	<i class="ss-icon">settings</i>
+	
+If you're in a situation where the user will lose context if an icon is missing (for example, if a button consists solely of an icon), then use conditional IE statements to either replace the icon with a text label via CSS or replace the actual HTML with a text label. Alternatively, use the javascript fallback to support keywords in older browsers.
+
 
 ### Responsive Images
 
