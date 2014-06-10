@@ -31,7 +31,6 @@ All HTML, CSS, Javascript and file names should be written entirely in lowercase
 
 Place a space after the ":" in property declarations.
 Place a space before the "{" in rule declarations.
-Use // for comments, not /* */.
 
 Do this:
 
