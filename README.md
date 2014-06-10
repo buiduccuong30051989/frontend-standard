@@ -34,17 +34,19 @@ Place a space before the "{" in rule declarations.
 
 Do this:
 
-    // Comment
     body {
         background: #fff;
     }
     
 Not this:
 
-    /* Comment */
     body{
         background:#fff;
     }
+    
+### !important
+
+Don't rely on using !important to override styles. Either make the styles to be overridden more generic or make the overriding styles more specific.
 
 ### SASS (SCSS)
 
@@ -129,6 +131,8 @@ This is fine:
 ### Media Queries
 
 Declare media queries as mixins in mixins.scss. Go mobile first. (for example: base styles, 400up, 600up, 1000up...)
+
+If you choose to go desktop-first and use max-width queries, make sure your mixin naming conventions reflect that (1000down, 600down, 400down...)
 
 Media queries should be nested and organized with the elements they are affecting. Read [Chris Coiyer's article](http://css-tricks.com/conditional-media-query-mixins/) for details.
 
