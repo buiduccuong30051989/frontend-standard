@@ -1,15 +1,13 @@
 KA+A Front-End Development Standard
 =================
 
-Internal Note: Compiling rules and ideas in the readme for now, to make sure we're all on the same page.
-
-Documented here are the standards for front-end development both defined and used by [KA+A](http://kaplusa.com). Before reading this, you should be familiar with proper HTML syntax, Responsive Web Design, media queries, and SASS (specifically the [SCSS](http://sass-lang.com/) syntax).
+Documented here are the standards for front-end development used by [KA+A](http://kaplusa.com). Before reading this, you should be familiar with proper HTML syntax, Responsive Web Design, media queries, and SASS (specifically the [SCSS](http://sass-lang.com/) syntax).
 
 ## General Rules
 
 ### Indentation
 
-Unless the environment requires otherwise (ruby, for example), use 4 space soft tabs for indentation of all code.
+Unless the environment/client requires otherwise, use 4 space soft tabs for indentation of all code.
 
 ### Double Quotes vs. Single Quotes
 
@@ -296,13 +294,13 @@ When using SymbolSet, use the descriptive class name (don't rely on keywords) fo
 
 #### Vector
 
-Use inline SVG for vector images. Provide a fallback for IE8. To keep code maintainable, use PHP or Hammer includes rather than pasting the entire inline SVG in the HTML.
+Use inline SVG for vector images. Use conditional IE statements to provide a [fallback for IE8](http://codepen.io/jeremychurch/pen/xkrgq). To keep code maintainable, use PHP or Hammer includes rather than pasting the entire inline SVG in the HTML.
 
 When using inline SVG, include title, description, role and aria-labeledby for optimizal accessibility. Further detail available [here](http://www.sitepoint.com/tips-accessible-svg/).
 
 #### Raster
 
-Use the picture element to provide the optimal image sizes and crops for different breakpoints and resolutions. For a fallback, use picturefill.js
+Use the picture element to provide the optimal image sizes and crops for different breakpoints and resolutions. For a fallback, use [picturefill.js](https://github.com/scottjehl/picturefill). To support certain browsers, you may need to use specific markup for your responsive images. [Details here](http://scottjehl.github.io/picturefill/).
 
 ### Attribute Order
 
