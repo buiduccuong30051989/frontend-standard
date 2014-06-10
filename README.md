@@ -74,8 +74,10 @@ Nest your SASS.
 Do this:
 
 	body {
+	
 		header {
 		}
+		
 	}
 
 Not this:
@@ -119,14 +121,6 @@ Not this:
 		}
 	}
 	
-This is fine:
-
-    ul {
-        li {
-            property:;
-        }
-    }
-    
 ### Media Queries
 
 Declare media queries as mixins in mixins.scss. Go mobile first. (for example: base styles, 400up, 600up, 1000up...)
@@ -184,6 +178,7 @@ Group CSS properties in the following order:
 		right:;
 		bottom:;
 		left:;
+		z-index:;
 		display:;
 		float:;
 		clear:;
@@ -191,15 +186,17 @@ Group CSS properties in the following order:
 		// Sizing
 		width:;
 		height:;
-		overflow:;
 		padding:;
 		margin:;
+		overflow:;
 		
 		// Font
 		font:;
 		line-height:;
 		color:;
+		text-decoration:;
 		text-shadow:;
+		text-transform:;
 		
 		// Background and borders
 		background:;
@@ -306,10 +303,10 @@ Use the picture element to provide the optimal image sizes and crops for differe
 
 For consistency, HTML attributes should be written in the following order:
 
-* class
-* id, name
-* data-*
 * src, for, type, href
+* id, name
+* class
+* data-*
 * title, alt
 * aria-*, role
 
