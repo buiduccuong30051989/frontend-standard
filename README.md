@@ -26,6 +26,8 @@ There are two exceptions to this rule:
 
 All HTML, CSS, Javascript and file names should be written entirely in lowercase. 
 
+The only exceptions to this rule are function names in Javascript and PHP. These should be camel-cased (functionName or longerFunctionName).
+
 ## CSS Rules
 
 Place a space after the ":" in property declarations.
