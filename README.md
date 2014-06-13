@@ -123,6 +123,38 @@ Not this:
 		}
 	}
 	
+### Targeting elements vs. classes
+
+If an element has a class, then target it using only the class. No need to specify the element and the class.
+
+For this:
+
+	<article class="featured-article">
+	
+Do this:
+
+	.featured-article {
+	}
+	
+Not this:
+
+	article.featured-article {
+	}
+	
+If an element has no class, then target it by the element name.
+
+For example:
+
+	<ul>
+		<li>
+		</li>
+	</ul>
+	
+	ul {
+		li {
+		}
+	}
+
 ### Media Queries
 
 Declare media queries as mixins in mixins.scss. Go mobile first. (for example: base styles, 400up, 600up, 1000up...)
