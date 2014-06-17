@@ -357,7 +357,7 @@ For consistency, HTML attributes should be written in the following order:
 
 For example:
 
-    <nav class="main-nav" role="navigation"
+    <nav class="main-nav" role="navigation">
         <a class="btn" id="menu-toggle" data-toggle="dropdown" href="#" role="button">
         <input id="first-name" name="first-name" type="text" />
     </nav>
