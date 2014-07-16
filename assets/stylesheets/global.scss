@@ -1,0 +1,45 @@
+@import 'mixins';
+
+html,
+button,
+input,
+select,
+textarea {
+    font-family: "chaparral-pro",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: $gray;
+}
+
+h1,
+h3 {
+    font-family: "ff-dax-web-pro",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+h2 {
+    margin-bottom: .75em;
+    color: $green;
+}
+
+a {
+    color: $green;
+}
+
+.container {
+    width: 92%;
+    margin: 0 auto;
+    
+    @include bp(720up) {
+        width: 84%;
+    }
+    
+    @include bp(960up) {
+        width: 76%;
+    }
+}
+
+.main {
+    padding: em(40) 0 em(40) 25%;
+}

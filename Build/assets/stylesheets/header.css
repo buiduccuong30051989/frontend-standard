@@ -1,0 +1,27 @@
+header[role="banner"] {
+  position: fixed;
+  top: 2.5em;
+  left: 4%;
+  width: 20%;
+  padding: 1.25em;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); }
+  @media (min-width: 45em) {
+    header[role="banner"] {
+      left: 8%; } }
+  @media (min-width: 60em) {
+    header[role="banner"] {
+      left: 12%; } }
+
+svg.logo {
+  display: block;
+  width: 180px;
+  max-width: 65%;
+  height: auto;
+  margin: 0 auto; }
+
+nav[role="navigation"] {
+  margin-top: 1.25em; }
+  nav[role="navigation"] a {
+    color: #576066;
+    text-decoration: none; }

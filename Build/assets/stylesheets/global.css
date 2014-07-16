@@ -1,0 +1,35 @@
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "chaparral-pro",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #576066; }
+
+h1,
+h3 {
+  font-family: "ff-dax-web-pro",sans-serif;
+  font-style: normal;
+  font-weight: 700; }
+
+h2 {
+  margin-bottom: .75em;
+  color: #89ba3e; }
+
+a {
+  color: #89ba3e; }
+
+.container {
+  width: 92%;
+  margin: 0 auto; }
+  @media (min-width: 45em) {
+    .container {
+      width: 84%; } }
+  @media (min-width: 60em) {
+    .container {
+      width: 76%; } }
+
+.main {
+  padding: 2.5em 0 2.5em 25%; }
