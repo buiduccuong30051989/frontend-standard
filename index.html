@@ -44,17 +44,15 @@
 	
 	<p>Do this:</p>
 	
-	<pre><code>body {
+	<pre><code class="language-css">body {
     background: #fff;
-}
-	</code></pre>
+}</code></pre>
 	
 	<p>Not this:</p>
 	
-	<pre><code>body{
+	<pre><code class="language-css">body{
     background:#fff;
-}
-	</code></pre>
+}</code></pre>
 	
 	<h3>!important</h3>
 	
@@ -90,34 +88,30 @@
 	
 	<p>Do this:</p>
 	
-	<pre><code>body {
+	<pre><code class="language-css">body {
 
     header {
     }
 
-}
-	</code></pre>
+}</code></pre>
 	
 	<p>Not this:</p>
 	
-	<pre><code>body header {
-}
-	</code></pre>
+	<pre><code class="language-css">body header {
+}</code></pre>
 	
 	<h3>Multiple Selectors</h3>
 	
 	<p>For multiple selectors, this:</p>
 	
-	<pre><code>ul,
+	<pre><code class="language-css">ul,
 ol {
-}
-	</code></pre>
+}</code></pre>
 	
 	<p>Not this:</p>
 	
-	<pre><code>ul, ol {
-}
-	</code></pre>
+	<pre><code class="language-css">ul, ol {
+}</code></pre>
 	
 	<h3>Spacing</h3>
 	
@@ -125,24 +119,22 @@ ol {
 	
 	<p>This:</p>
 	
-	<pre><code>ul {
+	<pre><code class="language-css">ul {
     property:;
 
     li {
         property:;
     }
-}
-	</code></pre>
+}</code></pre>
 	
 	<p>Not this:</p>
 	
-	<pre><code>ul {
+	<pre><code class="language-css">ul {
     property:;
     li {
         property:;
     }
-}
-	</code></pre>
+}</code></pre>
 	
 	<h3>Targeting elements vs. classes</h3>
 	
@@ -150,26 +142,23 @@ ol {
 	
 	<p>For this:</p>
 	
-	<pre><code>&lt;article class="featured-article"&gt;
-	</code></pre>
+	<pre><code class="language-markup">&lt;article class="featured-article"&gt;</code></pre>
 	
 	<p>Do this:</p>
 	
-	<pre><code>.featured-article {
-}
-	</code></pre>
+	<pre><code class="language-css">.featured-article {
+}</code></pre>
 	
 	<p>Not this:</p>
 	
-	<pre><code>article.featured-article {
-}
-	</code></pre>
+	<pre><code class="language-css">article.featured-article {
+}</code></pre>
 	
 	<p>If an element has no class, then target it by the element name.</p>
 	
 	<p>For example:</p>
 	
-	<pre><code>&lt;ul&gt;
+	<pre><code class="language-css">&lt;ul&gt;
     &lt;li&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
@@ -177,8 +166,7 @@ ol {
 ul {
     li {
     }
-}
-	</code></pre>
+}</code></pre>
 	
 	<h3>Media Queries</h3>
 	
@@ -202,15 +190,14 @@ ul {
 	
 	<p>Do this:</p>
 	
-	<pre><code>p {
+	<pre><code class="language-css">p {
     margin: 1em 0 2em;
     font: bold 1.5em/1.5 Helvetica;
-}
-	</code></pre>
+}</code></pre>
 	
 	<p>Not this:</p>
 	
-	<pre><code>p {
+	<pre><code class="language-css">p {
     margin-top: 1em;
     margin-right: 0;
     margin-bottom: 2em;
@@ -221,14 +208,13 @@ ul {
     font-family: Helvetica; 
     font-variant: normal;
     font-style: normal;
-}
-	</code></pre>
+}</code></pre>
 	
 	<h3>Property Order</h3>
 	
 	<p>Group CSS properties in the following order:</p>
 	
-	<pre><code>selector {
+	<pre><code class="language-css">selector {
 	
     // Content
     content:;
@@ -268,8 +254,7 @@ ul {
     // Transitions
     transitions:;
 
-}
-	</code></pre>
+}</code></pre>
 	
 	<p>Mixins should be included in the appropriate section. For example, the bourbon mixin "@include linear-gradient()" would be included in the background section, since it outputs the "background-image" property. (Note: Comments are for purposes of the style guide only. No need to comment each group of properties in your actual code.)</p>
 
@@ -291,17 +276,15 @@ ul {
 	
 	<p>Good class names:</p>
 	
-	<pre><code>.subnav
+	<pre><code class="language-css">.subnav
 .hero
-.btn-primary
-	</code></pre>
+.btn-primary</code></pre>
 	
 	<p>Bad class names:</p>
 	
-	<pre><code>.leftnav
+	<pre><code class="language-css">.leftnav
 .dark-background
-.red-button
-	</code></pre>
+.red-button</code></pre>
 	
 	<h3>Accessibility</h3>
 	
@@ -313,7 +296,7 @@ ul {
 	
 	<p>Include alt tags for all images with descriptive content. If no benefit can be provided through an alt tag (if the image is purely ornamental), then provide an empty alt tag:</p>
 	
-	<pre><code>alt=""</code></pre>
+	<pre><code class="language-markup">alt=""</code></pre>
 	
 	<h3>Optional Closing Tags</h3>
 	
@@ -321,21 +304,21 @@ ul {
 	
 	<p>Do this:</p>
 	
-	<pre><code>&lt;li&gt;List Item&lt;/li&gt;</code></pre>
+	<pre><code class="language-markup">&lt;li&gt;List Item&lt;/li&gt;</code></pre>
 	
 	<p>Not this:</p>
 	
-	<pre><code>&lt;li&gt;List Item</code></pre>
+	<pre><code class="language-markup">&lt;li&gt;List Item</code></pre>
 	
 	<p>On the other hand, do not close self-closing elements, such as the image or horizontal rule tags.</p>
 	
 	<p>Do this:</p>
 	
-	<pre><code>&lt;hr&gt;</code></pre>
+	<pre><code class="language-markup">&lt;hr&gt;</code></pre>
 	
 	<p>Not this:</p>
 	
-	<pre><code>&lt;hr /&gt;</code></pre>
+	<pre><code class="language-markup">&lt;hr /&gt;</code></pre>
 	
 	<h3>Type Attributes</h3>
 	
@@ -343,15 +326,13 @@ ul {
 	
 	<p>Do this:</p>
 	
-	<pre><code>&lt;link rel="stylesheet" src="style.css"&gt;
-&lt;script src="script.js"&gt;&lt;/script&gt;
-	</code></pre>
+	<pre><code class="language-markup">&lt;link rel="stylesheet" src="style.css"&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
 	
 	<p>Not this:</p>
 	
-	<pre><code>&lt;link rel="stylesheet" src="style.css" type="text/css"&gt;
-&lt;script src="script.js" type="text/javascript"&gt;&lt;/script&gt;
-	</code></pre>
+	<pre><code class="language-markup">&lt;link rel="stylesheet" src="style.css" type="text/css"&gt;
+&lt;script src="script.js" type="text/javascript"&gt;&lt;/script&gt;</code></pre>
 	
 	<h3>Icon Fonts</h3>
 	
@@ -359,11 +340,11 @@ ul {
 	
 	<p>Do this:</p>
 	
-	<pre><code>&lt;i class="ss-settings"&gt;&lt;/i&gt;</code></pre>
+	<pre><code class="language-markup">&lt;i class="ss-settings"&gt;&lt;/i&gt;</code></pre>
 	
 	<p>Not this:</p>
 	
-	<pre><code>&lt;i class="ss-icon"&gt;settings&lt;/i&gt;</code></pre>
+	<pre><code class="language-markup">&lt;i class="ss-icon"&gt;settings&lt;/i&gt;</code></pre>
 	
 	<p>If you're in a situation where the user will lose context if an icon is missing (for example, if a button consists solely of an icon), then use conditional IE statements to either replace the icon with a text label via CSS or replace the actual HTML with a text label. Alternatively, use the javascript fallback to support keywords in older browsers.</p>
 	
@@ -394,11 +375,10 @@ ul {
 	
 	<p>For example:</p>
 	
-	<pre><code>&lt;nav class="main-nav" role="navigation"&gt;
+	<pre><code class="language-markup">&lt;nav class="main-nav" role="navigation"&gt;
     &lt;a class="btn" id="menu-toggle" data-toggle="dropdown" href="#" role="button"&gt;
     &lt;input id="first-name" name="first-name" type="text" /&gt;
-&lt;/nav&gt;
-	</code></pre>
+&lt;/nav&gt;</code></pre>
 
 </section>
 

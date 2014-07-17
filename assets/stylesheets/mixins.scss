@@ -1,12 +1,13 @@
-$green: #89ba3e;
-$gray: #576066;
+$green: #8bb74f;
+$gray: #656565;
+$lightgray: #929292;
 
 @mixin bp($point) {
-    @if $point == 480up {
-        @media (min-width: em(480)) { @content; }
+    @if $point == 700up {
+        @media (min-width: em(700)) { @content; }
     }
-    @else if $point == 720up {
-        @media (min-width: em(720)) { @content; }
+    @else if $point == 820up {
+        @media (min-width: em(820)) { @content; }
     }
     @else if $point == 960up {
         @media (min-width: em(960)) { @content; }
