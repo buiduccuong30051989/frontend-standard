@@ -1,7 +1,7 @@
-KA+A Front-End Development Standard
+Studio Science Front-End Development Standard
 =================
 
-Documented here are the standards for front-end development used by [KA+A](http://kaplusa.com). Before reading this, you should be familiar with proper HTML syntax, Responsive Web Design, media queries, and SASS (specifically the [SCSS](http://sass-lang.com/) syntax).
+Documented here are the standards for front-end development used by [Studio Science](http://studioscience.com). Before reading this, you should be familiar with proper HTML syntax, Responsive Web Design, media queries, and SASS (specifically the [SCSS](http://sass-lang.com/) syntax).
 
 ## General Rules
 
